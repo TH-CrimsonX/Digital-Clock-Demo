@@ -1,0 +1,185 @@
+/* กำหนดสีพื้นฐานสำหรับ body และ html */
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* พื้นหลังสีดำสนิท */
+	color: #fefefe; /* สีข้อความขาวนวล */
+	font-family: Chakra Petch Medium, sans-serif; /* คงฟอนต์และเพิ่มฟอนต์สำรอง */
+}
+* {
+    box-sizing: border-box;
+}
+
+/* สไตล์สำหรับ input field */
+input {
+  font-family: "Chakra Petch Medium", sans-serif;
+  font-size: 14px;
+  margin-top: 40px;
+  display: block; /* ทำให้เป็น block-level element */
+  width: 250px; /* กำหนดความกว้างที่ชัดเจนเพื่อให้จัดกึ่งกลางได้ */
+  margin-left: auto; /* จัดกึ่งกลางแนวนอน */
+  margin-right: auto; /* จัดกึ่งกลางแนวนอน */
+  padding: 0.5rem 1rem;
+  background-color: #1a1a1a; /* พื้นหลัง input เป็นสีเทาเข้มเกือบดำ */
+  border: 1px solid #333333; /* ขอบ input เป็นสีเทาเข้ม */
+  color: #fefefe; /* สีข้อความใน input เป็นสีขาวนวล */
+  border-radius: 5px; /* เพิ่มขอบโค้งมน */
+}
+
+/* สไตล์สำหรับไอคอนปฏิทิน (WebKit browsers - Chrome, Safari, Edge Chromium) */
+input::-webkit-calendar-picker-indicator {
+    filter: invert(1) brightness(2); /* สลับสีและเพิ่มความสว่างเพื่อให้ไอคอนเป็นสีขาว */
+    cursor: pointer; /* คงสถานะให้คลิกได้ */
+    opacity: 1; /* ทำให้มองเห็นได้เต็มที่ */
+}
+
+/* สไตล์สำหรับไอคอนปฏิทิน (Firefox - อาจมีความน่าเชื่อถือน้อยกว่า) */
+input::-moz-calendar-picker-indicator {
+    filter: invert(1) brightness(2); /* สลับสีและเพิ่มความสว่างเพื่อให้ไอคอนเป็นสีขาว */
+    cursor: pointer;
+    opacity: 1;
+}
+
+/* สไตล์สำหรับเมื่อ focus ที่ input */
+input:focus {
+    outline: none;
+    border-color: #DC143C; /* สีขอบเมื่อ focus เป็น Crimson */
+    box-shadow: 0 0 0 3px rgba(220, 20, 60, 0.5); /* เพิ่มเงาสี Crimson เมื่อ focus */
+}
+
+
+/* สไตล์สำหรับ container หลัก */
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* เพิ่ม padding เพื่อให้มีช่องว่างรอบๆ */
+}
+
+/* สไตล์สำหรับนาฬิกา #clock */
+#clock {
+    font-size: 18vw;
+	margin: 40px 0px 0px 0px;
+	width: 100%;
+	text-align: center;
+    /* ปรับการไล่ระดับสีของข้อความให้เป็นธีม Crimson ที่เด่นชัดบนพื้นหลังดำ */
+    background-image: linear-gradient(to bottom,
+        #FF0000, /* สีแดงสด (Red) */
+		#DC143C, /* สี Crimson */
+		#8B0000  /* สีแดงเข้ม (Dark Red) */
+	);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(255, 0, 0, 0.6); /* เพิ่มเงาเรืองแสงสีแดง */
+}
+
+
+/* สไตล์สำหรับ frame ที่เก็บปุ่ม */
+.frame {
+  width: 100%;
+  margin: 40px auto;
+  text-align: center;
+}
+
+/* สไตล์พื้นฐานสำหรับปุ่ม custom-btn */
+.custom-btn {
+  width: 150px; /* ปรับความกว้างปุ่มเล็กน้อย */
+  height: 45px; /* ปรับความสูงปุ่มเล็กน้อย */
+  color: #fefefe; /* สีข้อความปุ่มขาวนวล */
+  border-radius: 8px; /* เพิ่มขอบโค้งมนมากขึ้น */
+  padding: 10px 25px;
+	margin: 15px 15px; /* ปรับ margin ระหว่างปุ่ม */
+	font-family: Chakra Petch Medium, sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 5px 0px rgba(255,255,255,.1), /* ปรับเงาให้ดูเข้ากับธีมมืดลงอีก */
+   7px 7px 20px 0px rgba(0,0,0,.2),
+   4px 4px 5px 0px rgba(0,0,0,.2);
+  outline: none;
+  border: none; /* ไม่มี border เริ่มต้น */
+}
+
+/* สไตล์สำหรับปุ่ม link-btn (ปุ่มที่กำหนดเฉพาะ) */
+.link-btn {
+  background: linear-gradient(to bottom, #DC143C 0%, #8B0000 100%); /* ปรับสี gradient ของปุ่มให้เป็นโทน Crimson ที่ชัดเจนขึ้น */
+  width: 150px;
+  height: 45px;
+  line-height: 45px; /* ปรับ line-height ให้เข้ากับความสูงใหม่ */
+  padding: 0;
+  border: none;
+}
+
+.link-btn span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px; /* ให้ span มีขอบโค้งมนด้วย */
+  z-index: 2; /* ให้ span อยู่เหนือ border pseudo-elements */
+}
+
+/* Border effect ของปุ่ม link-btn */
+.link-btn:before,
+.link-btn:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+   background: #FF0000; /* สีขอบเมื่อ hover เป็น Red */
+  transition: all 0.3s ease;
+  border-radius: 8px; /* ให้ border pseudo-elements มีขอบโค้งมน */
+}
+.link-btn:before {
+  height: 0%;
+  width: 2px;
+}
+.link-btn:after {
+  width: 0%;
+  height: 2px;
+}
+.link-btn:hover{
+   background: transparent; /* พื้นหลังใสเมื่อ hover */
+  box-shadow: none;
+}
+.link-btn:hover:before {
+  height: 100%;
+}
+.link-btn:hover:after {
+  width: 100%;
+}
+.link-btn span:hover{
+   color: #FF4500; /* สีข้อความเมื่อ hover เป็น OrangeRed เพื่อให้ดูเผ็ดร้อนขึ้น */
+}
+.link-btn span:before,
+.link-btn span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+   background: #FF0000; /* สีขอบเมื่อ hover เป็น Red */
+  transition: all 0.3s ease;
+  border-radius: 8px; /* ให้ border pseudo-elements มีขอบโค้งมน */
+}
+.link-btn span:before {
+  width: 2px;
+  height: 0%;
+}
+.link-btn span:after {
+  width: 0%;
+  height: 2px;
+}
+.link-btn span:hover:before {
+  height: 100%;
+}
+.link-btn span:hover:after {
+  width: 100%;
+}
