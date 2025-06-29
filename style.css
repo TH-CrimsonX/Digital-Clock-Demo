@@ -183,3 +183,37 @@ input:focus {
 .link-btn span:hover:after {
   width: 100%;
 }
+
+/* สไตล์สำหรับลิงก์ Crimson X ที่มีแอนิเมชันไหลวน */
+.crimson-x-animated {
+    display: inline-block; /* ต้องเป็น inline-block หรือ block เพื่อให้ background gradient ทำงาน */
+    /* ปรับการไล่สีจากแดง-ส้ม-เหลือง-แดง */
+    background-image: linear-gradient(to right, #FF0000, #FF4500, #FFFF00, #FF4500, #FF0000); 
+    background-size: 400% auto; /* ขนาดพื้นหลังที่ใหญ่กว่าข้อความเพื่อสร้างเอฟเฟกต์คลื่น */
+    -webkit-background-clip: text; /* ตัดพื้นหลังตามรูปทรงข้อความ */
+    -webkit-text-fill-color: transparent; /* ทำให้ข้อความโปร่งใสเพื่อแสดงพื้นหลัง */
+    animation: colorFlow 3s linear infinite; /* ใช้แอนิเมชันชื่อ colorFlow, ความเร็ว 3 วินาที (เร็วขึ้น), วนซ้ำไม่รู้จบ */
+    text-decoration: none; /* ลบเส้นใต้ลิงก์ */
+    font-weight: bold; /* ทำให้ตัวหนาขึ้น */
+    font-size: 2.4em; /* เพิ่มขนาดข้อความให้ใหญ่ขึ้นอีก */
+    line-height: 1; /* ปรับ line-height ให้ชิดขึ้น */
+    /* เพิ่มเงาเล็กน้อยเพื่อให้ดูสว่างและมีมิติ */
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.4); 
+}
+
+/* Keyframes สำหรับแอนิเมชันการไหลของสี */
+@keyframes colorFlow {
+  0% { background-position: 0% 50%; } /* เริ่มต้นที่ตำแหน่งซ้ายสุด */
+  100% { background-position: 100% 50%; } /* เลื่อนไปทางขวาสุด */
+}
+
+/* สไตล์สำหรับข้อความ "Powered by" */
+.powered-by-text {
+    font-size: 1.0em; /* เพิ่มขนาดข้อความให้ใหญ่ขึ้น */
+    color: #DC143C;
+    margin-top: 25px; /* ค่าเริ่มต้น */
+    margin-bottom: 0;
+    position: relative; /* ใช้ position relative เพื่อให้สามารถขยับได้ */
+    left: 10px; /* เลื่อนไปทางขวา */
+    top: 3px; /* เลื่อนขึ้นมาอีกนิด (จาก 5px เป็น 3px) */
+}
