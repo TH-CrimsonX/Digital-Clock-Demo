@@ -3,30 +3,30 @@
 
 @font-face {
   font-family: Genshin;
-  src: url("../fonts/Genshin.ttf");
+  src: url("fonts/Genshin.ttf");
   /* font-display: swap; */ /* พิจารณาเพิ่มเพื่อควบคุมการแสดงผลขณะโหลด */
 }
 
 @font-face {
   font-family: Chakra Petch Medium; /* เปลี่ยนจาก ChakraPetch-Medium เป็น Chakra Petch Medium ให้ตรงกับที่เรียกใช้ */
-  src: url("../fonts/ChakraPetch-Medium.ttf");
+  src: url("fonts/ChakraPetch-Medium.ttf");
   /* font-display: swap; */ /* พิจารณาเพิ่มเพื่อควบคุมการแสดงผลขณะโหลด */
 }
 
 @font-face {
   font-family: Kanit-Bold;
-  src: url("../fonts/Kanit-Bold.ttf");
+  src: url("fonts/Kanit-Bold.ttf");
   /* font-display: swap; */ /* พิจารณาเพิ่มเพื่อควบคุมการแสดงผลขณะโหลด */
 }
 
 @font-face {
   font-family: Kanit-Medium;
-  src: url("../fonts/Kanit-Medium.ttf");
+  src: url("fonts/Kanit-Medium.ttf");
   /* font-display: swap; */ /* พิจารณาเพิ่มเพื่อควบคุมการแสดงผลขณะโหลด */
 }
 
 @font-face {
   font-family: Kanit-Thin;
-  src: url("../fonts/Kanit-Thin.ttf");
+  src: url("fonts/Kanit-Thin.ttf");
   /* font-display: swap; */ /* พิจารณาเพิ่มเพื่อควบคุมการแสดงผลขณะโหลด */
 }
