@@ -1,27 +1,68 @@
+/* กำหนด Custom Properties ที่ระดับ :root เพื่อให้เข้าถึงได้ทั่วทั้งเอกสาร */
+:root {
+    /* ค่าสีแดงเริ่มต้นที่ปรับให้ทึบและนุ่มนวลขึ้น */
+    --theme-color-1: #CC0000; /* แดงเข้ม ทึบ */
+    --theme-color-2: #AA3939; /* แดงกลาง ทึบ */
+    --theme-color-3: #800000; /* แดงอ่อน ทึบ */
+    --theme-highlight-color: #CC0000; /* ไฮไลต์แดง */
+    --theme-hover-color: #FF6666; /* แดงอ่อนลงเมื่อ hover */
+    --theme-glow-color: rgba(204, 0, 0, 0.4); /* แสงเงาแดงนุ่ม */
+    --theme-message-box-shadow: rgba(170, 57, 57, 0.5); /* เงากล่องข้อความแดง */
+    --theme-powered-by-color: #CC3333; /* แดงสำหรับ Powered by */
+    --theme-crimson-x-gradient: linear-gradient(to right, #CC0000, #FF6666, #FFCC66, #FF6666, #CC0000); /* Gradient แดงนุ่ม */
+    
+    --body-bg-color: #000000; /* พื้นหลังสีดำสนิทเสมอ */
+    --theme-input-bg: #1A1A1A;
+    --theme-input-border: #444444;
+    --theme-text-color-light: #F0F0F0;
+}
+
 body, html {
     margin: 0;
     padding: 0;
-    background-color: #000000;
-	color: #fefefe;
+    background-color: var(--body-bg-color); /* ใช้ custom property */
+	color: var(--theme-text-color-light); /* ใช้ custom property */
 	font-family: Chakra Petch Medium, sans-serif;
 }
 * {
     box-sizing: border-box;
 }
 
-input {
+/* สไตล์สำหรับ input และ select */
+input, select {
   font-family: "Chakra Petch Medium", sans-serif;
   font-size: 14px;
-  margin-top: 40px;
+  margin-top: 20px; /* ลด margin-top ให้ใกล้ label */
   display: block;
   width: 250px;
   margin-left: auto;
   margin-right: auto;
   padding: 0.5rem 1rem;
-  background-color: #1a1a1a;
-  border: 1px solid #333333;
-  color: #fefefe;
+  background-color: var(--theme-input-bg); /* ใช้ custom property */
+  border: 1px solid var(--theme-input-border); /* ใช้ custom property */
+  color: var(--theme-text-color-light); /* ใช้ custom property */
   border-radius: 5px;
+  appearance: none; /* สำหรับ select: ลบสไตล์เริ่มต้นของเบราว์เซอร์ */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* สไตล์เพิ่มเติมสำหรับ Dropdown Arrow */
+select {
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20256%22%3E%3Cpath%20fill%3D%22%23F5F5F5%22%20d%3D%22M200.75%2099.25l-72%2072a6%206%200%2001-8.5%200l-72-72a6%206%200%20018.5-8.5l67.75%2067.75%2067.75-67.75a6%206%200%20018.5%208.5z%22%2F%3E%3C%2Fsvg%3E'); /* ไอคอนลูกศร */
+    background-repeat: no-repeat;
+    background-position: right 0.7rem center;
+    background-size: 1.2em;
+    padding-right: 2.5rem; /* เพิ่ม padding เพื่อไม่ให้ข้อความทับลูกศร */
+    cursor: pointer;
+}
+
+/* สไตล์สำหรับปุ่มเลือกธีม */
+label[for="themeSelector"] {
+    display: block;
+    margin-top: 20px; /* ปรับ margin-top ให้เหมาะสม */
+    font-size: 1em;
+    color: var(--theme-color-2); /* ให้สีเข้ากับธีม */
 }
 
 input::-webkit-calendar-picker-indicator {
@@ -36,10 +77,10 @@ input::-moz-calendar-picker-indicator {
     opacity: 1;
 }
 
-input:focus {
+input:focus, select:focus { /* รวม input และ select */
     outline: none;
-    border-color: #DC143C;
-    box-shadow: 0 0 0 3px rgba(220, 20, 60, 0.5);
+    border-color: var(--theme-color-2); /* ใช้ custom property */
+    box-shadow: 0 0 0 3px var(--theme-message-box-shadow); /* ใช้ custom property */
 }
 
 
@@ -58,23 +99,23 @@ input:focus {
 	width: 100%;
 	text-align: center;
     background-image: linear-gradient(to bottom,
-        #FF0000,
-		#DC143C,
-		#8B0000
+        var(--theme-color-1), /* ใช้ custom property */
+		var(--theme-color-2), /* ใช้ custom property */
+		var(--theme-color-3)  /* ใช้ custom property */
 	);
     background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent; 
     -moz-text-fill-color: transparent;
-    text-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+    text-shadow: 0 0 20px var(--theme-glow-color); /* ใช้ custom property */
 }
 
 #countdownDisplay {
     font-size: 0.8em;
     margin-top: 15px;
     margin-bottom: 15px;
-    color: #DC143C;
+    color: var(--theme-color-2); /* ใช้ custom property */
     text-align: center;
     width: 100%;
 }
@@ -89,7 +130,7 @@ input:focus {
 .custom-btn {
   width: 150px;
   height: 45px;
-  color: #fefefe;
+  color: var(--theme-text-color-light); /* ใช้ custom property */
   border-radius: 8px;
   padding: 10px 25px;
 	margin: 15px 15px;
@@ -108,7 +149,7 @@ input:focus {
 }
 
 .link-btn {
-  background: linear-gradient(to bottom, #DC143C 0%, #8B0000 100%);
+  background: linear-gradient(to bottom, var(--theme-color-2) 0%, var(--theme-color-3) 100%); /* ใช้ custom property */
   width: 150px;
   height: 45px;
   line-height: 45px;
@@ -131,7 +172,7 @@ input:focus {
   content: "";
   right: 0;
   top: 0;
-   background: #FF0000;
+   background: var(--theme-highlight-color); /* ใช้ custom property */
   transition: all 0.3s ease;
   border-radius: 8px;
 }
@@ -154,7 +195,7 @@ input:focus {
   width: 100%;
 }
 .link-btn span:hover{
-   color: #FF4500;
+   color: var(--theme-hover-color); /* ใช้ custom property */
 }
 .link-btn span:before,
 .link-btn span:after {
@@ -162,7 +203,7 @@ input:focus {
   content: "";
   left: 0;
   bottom: 0;
-   background: #FF0000;
+   background: var(--theme-highlight-color); /* ใช้ custom property */
   transition: all 0.3s ease;
   border-radius: 8px;
 }
@@ -186,14 +227,14 @@ input:focus {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #1a1a1a;
-    color: #fefefe;
+    background-color: var(--theme-input-bg); /* ใช้ custom property */
+    color: var(--theme-text-color-light); /* ใช้ custom property */
     padding: 20px;
     border-radius: 8px;
     z-index: 1000;
     font-family: 'Chakra Petch Medium', sans-serif;
-    box-shadow: 0 0 15px rgba(220, 20, 60, 0.7);
-    border: 1px solid #DC143C;
+    box-shadow: 0 0 15px var(--theme-message-box-shadow); /* ใช้ custom property */
+    border: 1px solid var(--theme-color-2); /* ใช้ custom property */
     text-align: center;
     max-width: 80%;
     box-sizing: border-box;
@@ -201,33 +242,37 @@ input:focus {
 
 .powered-by-text {
     font-size: 0.7em;
-    color: #FF004C;
+    color: var(--theme-powered-by-color); /* ใช้ custom property */
     margin-bottom: -10px;
 }
 
 .crimson-x-animated {
     display: inline-block;
-    background-image: linear-gradient(to right, #FF0000, #FF4500, #FFFF00, #FF4500, #FF0000);
-    background-size: 400% auto;
+    background-image: var(--theme-crimson-x-gradient); /* ใช้ custom property */
+    background-size: 600% auto; /* เพิ่มขนาด background เพื่อความสมูท */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: colorFlow 3s linear infinite;
+    animation: colorFlow 5s linear infinite; /* เพิ่มเวลา animation */
+    -webkit-animation-timing-function: ease-in-out; /* เพิ่ม easing function */
     text-decoration: none;
     font-weight: bold;
     font-size: 2.4em;
     line-height: 1;
-    text-shadow: 0 0 5px rgba(255, 0, 0, 0.4);
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.2); /* ลดความฟุ้งของเงา Crimson X */
 }
 
 .crimson-x-animated:hover {
-    text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.5);
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.4), 0 0 20px rgba(255, 0, 0, 0.2); /* ลดความฟุ้งของเงา Crimson X */
 }
 
 @keyframes colorFlow {
   0% {
     background-position: 0% 50%;
   }
-  100% {
+  50% {
     background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }

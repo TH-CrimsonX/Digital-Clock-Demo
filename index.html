@@ -27,22 +27,33 @@
             <button onclick="setAlarm()" class="custom-btn link-btn"><span>ยืนยันตั้งปลุก</span></button>
             <button id="cancelAlarmSetupBtn" class="custom-btn link-btn"><span>กลับหน้าแรก</span></button>
             <br>
-            <button class="custom-btn link-btn" onclick="window.open('../index.html');"><span>Link</span></button>
+            <button class="custom-btn link-btn" onclick="window.open('https://github.com/TH-CrimsonX');"><span>GitHub</span></button>
             <button class="custom-btn link-btn" onclick="window.open('index.html',null,'toolbar=no,directories=no,menubar=no,scrollbars=no,location=no,resizable =no,width=685,height=1165,left=0,top=0');"><span>เปิดแบบ Pop-up</span></button>
 		</div>
+        
+        <label for="themeSelector">เลือกธีมสี:</label>
+        <select id="themeSelector" onchange="applyTheme(this.value)">
+            <option value="red">แดง</option>
+            <option value="blue">น้ำเงิน</option>
+            <option value="green">เขียว</option>
+            <option value="purple">ม่วง</option>
+            <option value="orange">ส้ม</option>
+            <option value="pink">ชมพู</option>
+            <option value="gold">ทอง</option>
+            <option value="cyan">ฟ้าอมเขียว</option>
+        </select>
+        <br>
         <p class="powered-by-text">
             Powered by
         </p>
         <p style="margin-top: -5px;">
-            <a href="https://discordapp.com/users/122811441819549697" target="_blank" class="crimson-x-animated">Crimson X</a>
+            <a href="https://discord.com/users/122811441819549697" target="_blank" class="crimson-x-animated">
+                Crimson X
+            </a>
         </p>
 	</div>
+</section>
 
-</section>	
-	
-    <script src="script.js"></script>
-	
+<script src="script.js"></script>
 </body>
-	
-	
 </html>
