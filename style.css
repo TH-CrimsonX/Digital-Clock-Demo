@@ -1,99 +1,98 @@
-/* กำหนดสีพื้นฐานสำหรับ body และ html */
 body, html {
     margin: 0;
     padding: 0;
-    background-color: #000000; /* พื้นหลังสีดำสนิท */
-	color: #fefefe; /* สีข้อความขาวนวล */
-	font-family: Chakra Petch Medium, sans-serif; /* คงฟอนต์และเพิ่มฟอนต์สำรอง */
+    background-color: #000000;
+	color: #fefefe;
+	font-family: Chakra Petch Medium, sans-serif;
 }
 * {
     box-sizing: border-box;
 }
 
-/* สไตล์สำหรับ input field */
 input {
   font-family: "Chakra Petch Medium", sans-serif;
   font-size: 14px;
   margin-top: 40px;
-  display: block; /* ทำให้เป็น block-level element */
-  width: 250px; /* กำหนดความกว้างที่ชัดเจนเพื่อให้จัดกึ่งกลางได้ */
-  margin-left: auto; /* จัดกึ่งกลางแนวนอน */
-  margin-right: auto; /* จัดกึ่งกลางแนวนอน */
+  display: block;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0.5rem 1rem;
-  background-color: #1a1a1a; /* พื้นหลัง input เป็นสีเทาเข้มเกือบดำ */
-  border: 1px solid #333333; /* ขอบ input เป็นสีเทาเข้ม */
-  color: #fefefe; /* สีข้อความใน input เป็นสีขาวนวล */
-  border-radius: 5px; /* เพิ่มขอบโค้งมน */
+  background-color: #1a1a1a;
+  border: 1px solid #333333;
+  color: #fefefe;
+  border-radius: 5px;
 }
 
-/* สไตล์สำหรับไอคอนปฏิทิน (WebKit browsers - Chrome, Safari, Edge Chromium) */
 input::-webkit-calendar-picker-indicator {
-    filter: invert(1) brightness(2); /* สลับสีและเพิ่มความสว่างเพื่อให้ไอคอนเป็นสีขาว */
-    cursor: pointer; /* คงสถานะให้คลิกได้ */
-    opacity: 1; /* ทำให้มองเห็นได้เต็มที่ */
-}
-
-/* สไตล์สำหรับไอคอนปฏิทิน (Firefox - อาจมีความน่าเชื่อถือน้อยกว่า) */
-input::-moz-calendar-picker-indicator {
-    filter: invert(1) brightness(2); /* สลับสีและเพิ่มความสว่างเพื่อให้ไอคอนเป็นสีขาว */
+    filter: invert(1) brightness(2);
     cursor: pointer;
     opacity: 1;
 }
 
-/* สไตล์สำหรับเมื่อ focus ที่ input */
+input::-moz-calendar-picker-indicator {
+    filter: invert(1) brightness(2);
+    cursor: pointer;
+    opacity: 1;
+}
+
 input:focus {
     outline: none;
-    border-color: #DC143C; /* สีขอบเมื่อ focus เป็น Crimson */
-    box-shadow: 0 0 0 3px rgba(220, 20, 60, 0.5); /* เพิ่มเงาสี Crimson เมื่อ focus */
+    border-color: #DC143C;
+    box-shadow: 0 0 0 3px rgba(220, 20, 60, 0.5);
 }
 
 
-/* สไตล์สำหรับ container หลัก */
 .container {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px; /* เพิ่ม padding เพื่อให้มีช่องว่างรอบๆ */
+    padding: 20px;
 }
 
-/* สไตล์สำหรับนาฬิกา #clock */
 #clock {
     font-size: 18vw;
 	margin: 40px 0px 0px 0px;
 	width: 100%;
 	text-align: center;
-    /* ปรับการไล่ระดับสีของข้อความให้เป็นธีม Crimson ที่เด่นชัดบนพื้นหลังดำ */
     background-image: linear-gradient(to bottom,
-        #FF0000, /* สีแดงสด (Red) */
-		#DC143C, /* สี Crimson */
-		#8B0000  /* สีแดงเข้ม (Dark Red) */
+        #FF0000,
+		#DC143C,
+		#8B0000
 	);
     background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent; 
     -moz-text-fill-color: transparent;
-    text-shadow: 0 0 20px rgba(255, 0, 0, 0.6); /* เพิ่มเงาเรืองแสงสีแดง */
+    text-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+}
+
+#countdownDisplay {
+    font-size: 0.8em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #DC143C;
+    text-align: center;
+    width: 100%;
 }
 
 
-/* สไตล์สำหรับ frame ที่เก็บปุ่ม */
 .frame {
   width: 100%;
   margin: 40px auto;
   text-align: center;
 }
 
-/* สไตล์พื้นฐานสำหรับปุ่ม custom-btn */
 .custom-btn {
-  width: 150px; /* ปรับความกว้างปุ่มเล็กน้อย */
-  height: 45px; /* ปรับความสูงปุ่มเล็กน้อย */
-  color: #fefefe; /* สีข้อความปุ่มขาวนวล */
-  border-radius: 8px; /* เพิ่มขอบโค้งมนมากขึ้น */
+  width: 150px;
+  height: 45px;
+  color: #fefefe;
+  border-radius: 8px;
   padding: 10px 25px;
-	margin: 15px 15px; /* ปรับ margin ระหว่างปุ่ม */
+	margin: 15px 15px;
 	font-family: Chakra Petch Medium, sans-serif;
   font-weight: 500;
   background: transparent;
@@ -101,19 +100,18 @@ input:focus {
   transition: all 0.3s ease;
   position: relative;
   display: inline-block;
-   box-shadow:inset 2px 2px 5px 0px rgba(255,255,255,.1), /* ปรับเงาให้ดูเข้ากับธีมมืดลงอีก */
+   box-shadow:inset 2px 2px 5px 0px rgba(255,255,255,.1),
    7px 7px 20px 0px rgba(0,0,0,.2),
    4px 4px 5px 0px rgba(0,0,0,.2);
   outline: none;
-  border: none; /* ไม่มี border เริ่มต้น */
+  border: none;
 }
 
-/* สไตล์สำหรับปุ่ม link-btn (ปุ่มที่กำหนดเฉพาะ) */
 .link-btn {
-  background: linear-gradient(to bottom, #DC143C 0%, #8B0000 100%); /* ปรับสี gradient ของปุ่มให้เป็นโทน Crimson ที่ชัดเจนขึ้น */
+  background: linear-gradient(to bottom, #DC143C 0%, #8B0000 100%);
   width: 150px;
   height: 45px;
-  line-height: 45px; /* ปรับ line-height ให้เข้ากับความสูงใหม่ */
+  line-height: 45px;
   padding: 0;
   border: none;
 }
@@ -123,20 +121,19 @@ input:focus {
   display: block;
   width: 100%;
   height: 100%;
-  border-radius: 8px; /* ให้ span มีขอบโค้งมนด้วย */
-  z-index: 2; /* ให้ span อยู่เหนือ border pseudo-elements */
+  border-radius: 8px;
+  z-index: 2;
 }
 
-/* Border effect ของปุ่ม link-btn */
 .link-btn:before,
 .link-btn:after {
   position: absolute;
   content: "";
   right: 0;
   top: 0;
-   background: #FF0000; /* สีขอบเมื่อ hover เป็น Red */
+   background: #FF0000;
   transition: all 0.3s ease;
-  border-radius: 8px; /* ให้ border pseudo-elements มีขอบโค้งมน */
+  border-radius: 8px;
 }
 .link-btn:before {
   height: 0%;
@@ -147,7 +144,7 @@ input:focus {
   height: 2px;
 }
 .link-btn:hover{
-   background: transparent; /* พื้นหลังใสเมื่อ hover */
+   background: transparent;
   box-shadow: none;
 }
 .link-btn:hover:before {
@@ -157,7 +154,7 @@ input:focus {
   width: 100%;
 }
 .link-btn span:hover{
-   color: #FF4500; /* สีข้อความเมื่อ hover เป็น OrangeRed เพื่อให้ดูเผ็ดร้อนขึ้น */
+   color: #FF4500;
 }
 .link-btn span:before,
 .link-btn span:after {
@@ -165,9 +162,9 @@ input:focus {
   content: "";
   left: 0;
   bottom: 0;
-   background: #FF0000; /* สีขอบเมื่อ hover เป็น Red */
+   background: #FF0000;
   transition: all 0.3s ease;
-  border-radius: 8px; /* ให้ border pseudo-elements มีขอบโค้งมน */
+  border-radius: 8px;
 }
 .link-btn span:before {
   width: 2px;
@@ -184,36 +181,53 @@ input:focus {
   width: 100%;
 }
 
-/* สไตล์สำหรับลิงก์ Crimson X ที่มีแอนิเมชันไหลวน */
-.crimson-x-animated {
-    display: inline-block; /* ต้องเป็น inline-block หรือ block เพื่อให้ background gradient ทำงาน */
-    /* ปรับการไล่สีจากแดง-ส้ม-เหลือง-แดง */
-    background-image: linear-gradient(to right, #FF0000, #FF4500, #FFFF00, #FF4500, #FF0000); 
-    background-size: 400% auto; /* ขนาดพื้นหลังที่ใหญ่กว่าข้อความเพื่อสร้างเอฟเฟกต์คลื่น */
-    -webkit-background-clip: text; /* ตัดพื้นหลังตามรูปทรงข้อความ */
-    -webkit-text-fill-color: transparent; /* ทำให้ข้อความโปร่งใสเพื่อแสดงพื้นหลัง */
-    animation: colorFlow 3s linear infinite; /* ใช้แอนิเมชันชื่อ colorFlow, ความเร็ว 3 วินาที (เร็วขึ้น), วนซ้ำไม่รู้จบ */
-    text-decoration: none; /* ลบเส้นใต้ลิงก์ */
-    font-weight: bold; /* ทำให้ตัวหนาขึ้น */
-    font-size: 2.4em; /* เพิ่มขนาดข้อความให้ใหญ่ขึ้นอีก */
-    line-height: 1; /* ปรับ line-height ให้ชิดขึ้น */
-    /* เพิ่มเงาเล็กน้อยเพื่อให้ดูสว่างและมีมิติ */
-    text-shadow: 0 0 5px rgba(255, 0, 0, 0.4); 
+.custom-message-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1a1a1a;
+    color: #fefefe;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1000;
+    font-family: 'Chakra Petch Medium', sans-serif;
+    box-shadow: 0 0 15px rgba(220, 20, 60, 0.7);
+    border: 1px solid #DC143C;
+    text-align: center;
+    max-width: 80%;
+    box-sizing: border-box;
 }
 
-/* Keyframes สำหรับแอนิเมชันการไหลของสี */
-@keyframes colorFlow {
-  0% { background-position: 0% 50%; } /* เริ่มต้นที่ตำแหน่งซ้ายสุด */
-  100% { background-position: 100% 50%; } /* เลื่อนไปทางขวาสุด */
-}
-
-/* สไตล์สำหรับข้อความ "Powered by" */
 .powered-by-text {
-    font-size: 1.0em; /* เพิ่มขนาดข้อความให้ใหญ่ขึ้น */
-    color: #DC143C;
-    margin-top: 25px; /* ค่าเริ่มต้น */
-    margin-bottom: 0;
-    position: relative; /* ใช้ position relative เพื่อให้สามารถขยับได้ */
-    left: 10px; /* เลื่อนไปทางขวา */
-    top: 3px; /* เลื่อนขึ้นมาอีกนิด (จาก 5px เป็น 3px) */
+    font-size: 0.7em;
+    color: #FF004C;
+    margin-bottom: -10px;
+}
+
+.crimson-x-animated {
+    display: inline-block;
+    background-image: linear-gradient(to right, #FF0000, #FF4500, #FFFF00, #FF4500, #FF0000);
+    background-size: 400% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: colorFlow 3s linear infinite;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2.4em;
+    line-height: 1;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.4);
+}
+
+.crimson-x-animated:hover {
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+@keyframes colorFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }

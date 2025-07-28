@@ -1,32 +1,60 @@
+/*
+ * font.css
+ * ไฟล์นี้ใช้สำหรับกำหนด Font-face เพื่อโหลดและใช้งานฟอนต์ที่กำหนดเองในโปรเจกต์
+ */
+
 @charset "utf-8";
-/* CSS Document */
+/* กำหนดชุดตัวอักษรสำหรับไฟล์ CSS */
 
+/*
+ * @font-face Rule สำหรับฟอนต์ Genshin
+ * กำหนดชื่อฟอนต์ 'Genshin' และระบุพาธไปยังไฟล์ฟอนต์ Genshin.ttf
+ * สามารถพิจารณาเพิ่ม `font-display: swap;` เพื่อจัดการการแสดงผลของข้อความขณะที่ฟอนต์กำลังโหลด
+ */
 @font-face {
-  font-family: Genshin;
-  src: url("fonts/Genshin.ttf");
-  /* font-display: swap; */ /* พิจารณาเพิ่มเพื่อควบคุมการแสดงผลขณะโหลด */
+  font-family: Genshin; /* ชื่อที่ใช้อ้างอิงฟอนต์นี้ใน CSS อื่นๆ */
+  src: url("fonts/Genshin.ttf"); /* พาธไปยังไฟล์ฟอนต์ */
+  /* font-display: swap; */ /* พิจารณาเพิ่ม: ควบคุมการแสดงผลข้อความขณะโหลดฟอนต์ */
 }
 
+/*
+ * @font-face Rule สำหรับฟอนต์ Chakra Petch Medium
+ * กำหนดชื่อฟอนต์ 'Chakra Petch Medium' และระบุพาธไปยังไฟล์ฟอนต์ ChakraPetch-Medium.ttf
+ * (หมายเหตุ: ชื่อ font-family ถูกปรับให้ตรงกับการเรียกใช้ใน style.css เพื่อความสอดคล้อง)
+ * สามารถพิจารณาเพิ่ม `font-display: swap;` เพื่อจัดการการแสดงผลของข้อความขณะที่ฟอนต์กำลังโหลด
+ */
 @font-face {
-  font-family: Chakra Petch Medium; /* เปลี่ยนจาก ChakraPetch-Medium เป็น Chakra Petch Medium ให้ตรงกับที่เรียกใช้ */
-  src: url("fonts/ChakraPetch-Medium.ttf");
-  font-display: swap; /* พิจารณาเพิ่มเพื่อควบคุมการแสดงผลขณะโหลด */
+  font-family: Chakra Petch Medium; /* ชื่อฟอนต์ (ปรับให้ตรงกับที่เรียกใช้) */
+  src: url("fonts/ChakraPetch-Medium.ttf"); /* พาธไปยังไฟล์ฟอนต์ */
+  /* font-display: swap; */ /* พิจารณาเพิ่ม: ควบคุมการแสดงผลข้อความขณะโหลดฟอนต์ */
 }
 
+/*
+ * @font-face Rule สำหรับฟอนต์ Kanit-Bold
+ * กำหนดชื่อฟอนต์ 'Kanit-Bold' และระบุพาธไปยังไฟล์ฟอนต์ Kanit-Bold.ttf
+ */
 @font-face {
   font-family: Kanit-Bold;
   src: url("fonts/Kanit-Bold.ttf");
-  font-display: swap; /* พิจารณาเพิ่มเพื่อควบคุมการแสดงผลขณะโหลด */
+  /* font-display: swap; */
 }
 
+/*
+ * @font-face Rule สำหรับฟอนต์ Kanit-Medium
+ * กำหนดชื่อฟอนต์ 'Kanit-Medium' และระบุพาธไปยังไฟล์ฟอนต์ Kanit-Medium.ttf
+ */
 @font-face {
   font-family: Kanit-Medium;
   src: url("fonts/Kanit-Medium.ttf");
-  font-display: swap; /* พิจารณาเพิ่มเพื่อควบคุมการแสดงผลขณะโหลด */
+  /* font-display: swap; */
 }
 
+/*
+ * @font-face Rule สำหรับฟอนต์ Kanit-Thin
+ * กำหนดชื่อฟอนต์ 'Kanit-Thin' และระบุพาธไปยังไฟล์ฟอนต์ Kanit-Thin.ttf
+ */
 @font-face {
   font-family: Kanit-Thin;
   src: url("fonts/Kanit-Thin.ttf");
-  font-display: swap; /* พิจารณาเพิ่มเพื่อควบคุมการแสดงผลขณะโหลด */
+  /* font-display: swap; */
 }

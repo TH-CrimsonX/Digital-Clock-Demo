@@ -2,13 +2,11 @@
 <html lang="en">
 <head>
 
-<!-- ico / favicon-->
-<link type="image/x-icon" href="crimsonx_32x32.ico" rel="shortcut icon" />
+<link type="image/x-icon" href="../crimsonx_32x32.ico" rel="shortcut icon" />
 	
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- ลบลิงก์ preconnect ที่ไม่จำเป็นออก -->
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="font.css">
@@ -17,34 +15,34 @@
 </head>
 <body>
 <section class="container">
-    <div id="clock"></div>
-    <div id="countdownDisplay" style="font-size: 0.8em; margin-top: 10px; color: #DC143C;"></div>
+	<div id="clock"></div>
+    <div id="countdownDisplay"></div>
 
-    <button id="toggleAlarmSetupBtn" class="custom-btn link-btn"><span>ตั้งค่า</span></button>
     <button id="mainClearAlarmBtn" class="custom-btn link-btn" style="display: none;"><span>ปิดนาฬิกาปลุก</span></button>
+    <button id="toggleAlarmSetupBtn" class="custom-btn link-btn"><span>ตั้งค่า</span></button>
 
     <div id="alarmControls" style="display: none; text-align: center;">
-        <input onchange="setAlarmTime(this.value)" name="alarmTime" type="datetime-local">
-        <div class="frame">
+		<input onchange="setAlarmTime(this.value)" name="alarmTime" type="datetime-local">
+		<div class="frame">
             <button onclick="setAlarm()" class="custom-btn link-btn"><span>ยืนยันตั้งปลุก</span></button>
-            <button onclick="clearAlarm()" class="custom-btn link-btn"><span>ยกเลิกปลุก</span></button>
-            <button id="cancelAlarmSetupBtn" class="custom-btn link-btn"><span>ยกเลิก</span></button>
+            <button id="cancelAlarmSetupBtn" class="custom-btn link-btn"><span>กลับหน้าแรก</span></button>
             <br>
             <button class="custom-btn link-btn" onclick="window.open('../index.html');"><span>Link</span></button>
             <button class="custom-btn link-btn" onclick="window.open('index.html',null,'toolbar=no,directories=no,menubar=no,scrollbars=no,location=no,resizable =no,width=685,height=1165,left=0,top=0');"><span>เปิดแบบ Pop-up</span></button>
-        </div>
+		</div>
         <p class="powered-by-text">
             Powered by
         </p>
-        <p style="margin-top: -5px;"> <!-- ใช้ margin-top ติดลบเพื่อดึงขึ้นมา -->
+        <p style="margin-top: -5px;">
             <a href="https://discordapp.com/users/122811441819549697" target="_blank" class="crimson-x-animated">Crimson X</a>
         </p>
-    </div>
+	</div>
 
-</section>    
-    
+</section>	
+	
     <script src="script.js"></script>
-    
-</body>    
+	
+</body>
+	
 	
 </html>
